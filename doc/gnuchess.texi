@@ -15,7 +15,7 @@
 This manual is for GNU Chess (version @value{VERSION}, @value{UPDATED}),
 which is a complete chess program, frequently used as a chess engine.
 
-Copyright @copyright{} 2001--2011 Free Software Foundation, Inc.
+Copyright @copyright{} 2001--2013 Free Software Foundation, Inc.
 
 @quotation
 Permission is granted to copy, distribute and/or modify this document
@@ -263,6 +263,12 @@ Enable UCI protocol (externally behave as UCI engine).
 @opindex --memory
 @opindex -M
 Specify memory usage in MB for hashtable.
+
+@item --addbook filename
+@itemx -a filename
+@opindex --addbook
+@opindex -a
+Compile book.bin from pgn book 'filename' and quits.
 
 @end table
 

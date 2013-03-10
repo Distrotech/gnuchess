@@ -2,7 +2,7 @@
 
    GNU Chess frontend
 
-   Copyright (C) 2001-2011 Free Software Foundation, Inc.
+   Copyright (C) 2001-2013 Free Software Foundation, Inc.
 
    GNU Chess is based on the two research programs 
    Cobalt by Chua Kong-Sian and Gazebo by Stuart Cracraft.
@@ -580,7 +580,7 @@ void cmd_undo(void)
 {
   SetDataToEngine( "force\nundo" );
   ChangeColor( true );
-  SetAutoGo( true );
+  SetAutoGo( !(flags & MANUAL) );
   if (GameCnt >= 0)
     UnmakeMove (board.side, &Game[GameCnt].move);
   else
@@ -610,6 +610,7 @@ void cmd_usage(void)
      " -m, --manual       enable manual mode\n"
      " -u, --uci          enable UCI protocol (externally behave as UCI engine)\n"
      " -M size, --memory=size   specify memory usage in MB for hashtable\n"
+     " -a filename, --addbook=filename   compile book.bin from pgn book 'filename'\n"
      "\n"
      " Options xboard and post are accepted without leading dashes\n"
      " for backward compatibility.\n"
@@ -798,7 +799,7 @@ static const char * const helpstr[] = {
    "help",
    " Produces a help blurb corresponding to this list of commands.",
    "book",
-   " add - compiles book.dat from book.pgn",
+   " add - compiles book.bin from a pgn book file",
    " on - enables use of book",
    " off - disables use of book",
    " worst - play worst move from book",

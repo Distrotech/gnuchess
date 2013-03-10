@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 dnl
-dnl Copyright (C) 2001-2011 Free Software Foundation, Inc.
+dnl Copyright (C) 2001-2013 Free Software Foundation, Inc.
 dnl
 dnl This file is free software; as a special exception the author gives
 dnl unlimited permission to copy and/or distribute it, with or without
@@ -10,11 +10,11 @@ dnl This program is distributed in the hope that it will be useful, but
 dnl WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
 dnl implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-AC_INIT([GNU Chess], [6.0.0], [bug-gnu-chess@gnu.org])
+AC_INIT([GNU Chess], [6.0.3], [bug-gnu-chess@gnu.org], [gnuchess])
 AC_PREREQ(2.13)
-AM_INIT_AUTOMAKE(gnuchess, 6.0.0)
-AM_CONFIG_HEADER(src/config.h)
+AC_CONFIG_HEADERS(src/config.h)
 AC_CONFIG_SRCDIR([src/main.cc])
+AM_INIT_AUTOMAKE
 
 dnl Checks for programs.
 AC_PROG_CC

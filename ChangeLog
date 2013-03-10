@@ -1,6 +1,98 @@
+2013-03-10  Antonio Ceballos  <aceballos@gmail.com>
+
+	* configure.ac: explicit package name in AC_INIT.
+
+2013-03-10  Antonio Ceballos  <aceballos@gmail.com>
+
+	* configure.ac: version 6.0.3
+	* NEWS: changes in version 6.0.3
+	* doc/gnuchess.texi: date
+	* doc/version.texi: version
+
+
+2013-03-10  Antonio Ceballos  <aceballos@gmail.com>
+
+	* configure.ac: replace AM_CONFIG_HEADER by AC_CONFIG_HEADERS;
+	modernize AM_INIT_AUTOMAKE.
+
+2013-03-10  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/frontend/cmd.c: if in manual mode, keep it after undo.
+	* src/main.cc: sleep 100us in main loop to avoid 100% CPU.
+
+2012-08-29  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/adapter/pgn.cpp: Ignore rest of line instead of
+	crashing when unexpected token is found in game line.
+	This way, book_1.01.pgn can be successfully read.
+
+2012-08-29  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/frontend/output.c: removed unused code.
+	* src/frontend/genmove.c: removed unused code.
+	* src/frontend/move.c: removed unused code.
+	* src/frontend/atak.c: removed unused code.
+	* src/frontend/solve.c: removed unused code.
+	* src/frontend/common.h: removed unused code.
+	* src/main.cc: removed unused code.
+	* TODO: added some tasks
+
+2012-03-05  Antonio Ceballos  <aceballos@gmail.com>
+
+	* INSTALL: Remove reference to inexistent doc/README.
+
+2012-03-04  Antonio Ceballos  <aceballos@gmail.com>
+
+	Idea from Kamil Rytarowski <n54@gmx.com>
+	* src/adapter/main.cpp: Open book file in read-only or read-write
+	mode depending on BookLearn option false or true, respectively.
+	* src/adapter/adapter.cpp: Open book file in read-only or read-write
+	mode depending on BookLearn option false or true, respectively.
+	* src/adapter/book.h: book_open() can open a book file in
+	read-only or read-write mode.
+	* src/adapter/book.cpp: book_open() can open a book file in
+	read-only or read-write mode.
+
+	* NEWS: Add the book open mode issue to the changes in version 6.0.2
+
+2012-02-12  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/main.cc: Fix version number in file heading.
+	Increase size of string for the --addbook option.
+	* src/components.cc: Fix version number in file heading.
+	* src/components.h: Fix version number in file heading.
+	* configure.ac: help for --addbook option.
+	* NEWS: changes in version 6.0.2
+	* test/README: record 6.0.1 ranking in FICS.
+	* configure.ac: version 6.0.2
+
+2012-02-06  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/main.cc: new --addbook option to compile book and quit.
+	* src/frontend/cmd.c: help for --addbook option.
+	* doc/gnuchess.texi: info for --addbook option.
+
+2011-12-26  Josef Reidinger  <jreidinger@suse.com>  (tiny change)
+
+	* src/components.cc: add missing return in functions returning
+	non-void.
+
+2011-09-20  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/frontend/epd.c: extend maximum file name length of EPD
+	files to 127 characters for the load and loadepd commands.
+
+2011-09-07  Antonio Ceballos  <aceballos@gmail.com>
+
+	* src/components.cc: fix race condition.
+	* configure.ac: version 6.0.1
+	* NEWS: changes in version 6.0.1
+	* INSTALL: remove info not related to installation
+
 2011-08-20  Antonio Ceballos  <aceballos@gmail.com>
 
-	* src/adapter/adapter.cpp: Fix program crash for solveepd with st 30.
+	* src/adapter/adapter.cpp: fix program crash for solveepd with st 30.
+	* src/frontend/engine.c: allow kibitz for solve command.
 
 2011-07-31  Antonio Ceballos  <aceballos@gmail.com>
 
@@ -107,7 +199,7 @@
 	* src/frontend/engine.c: comment out extra output write.
 	* src/adapter/adapter.cpp: remove debug trace.
 
-Copyright (C) 2001-2011 Free Software Foundation, Inc.
+Copyright (C) 2001-2013 Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
